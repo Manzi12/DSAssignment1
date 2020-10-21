@@ -14,22 +14,22 @@ public class Gui extends JFrame implements ActionListener {
 	/**
 	 * The LABELS
 	 */
-	JLabel taxNumberLabel;
-	JLabel firstNameLabel;
-	JLabel lastNameLabel;
-	JLabel jobTitleLabel;
-	JLabel salaryLabel;
-	JLabel emailLabel;
+	public JLabel taxNumberLabel;
+	public JLabel firstNameLabel;
+	public JLabel lastNameLabel;
+	public JLabel jobTitleLabel;
+	public JLabel salaryLabel;
+	public JLabel emailLabel;
 	
 	/**
 	 * The TextFields
 	 */
-	JTextField taxNumberText;
-	JTextField firstNameText;
-	JTextField lastNameText;
-	JTextField jobTitleText;
-	JTextField salaryText;
-	JTextField emailText;
+	public JTextField taxNumberText;
+	public JTextField firstNameText;
+	public JTextField lastNameText;
+	public JTextField jobTitleText;
+	public JTextField salaryText;
+	public JTextField emailText;
 	
 	/**
 	 * The Buttons
@@ -44,7 +44,7 @@ public class Gui extends JFrame implements ActionListener {
 	JTable listTable;
 	JLabel tittleLabel;
 	
-	Gui(){
+	public Gui(){
 		
 		/**
 		 * Creating the Labels
@@ -94,10 +94,14 @@ public class Gui extends JFrame implements ActionListener {
 		updateButton = new JButton("Update");
 		deleteButton = new JButton("Delete");
 		
+//		saveButton.addActionListener(this);
+//		updateButton.addActionListener(this);
+//		deleteButton.addActionListener(this);
+		
 		//set bounds for the buttons
-		saveButton.setBounds(70,50,70,50);
-		updateButton.setBounds(70,50,70,50);
-		deleteButton.setBounds(70,50,70,50);
+		saveButton.setBounds(50,350,70,50);
+		updateButton.setBounds(120,300,70,50);
+		deleteButton.setBounds(190,300,70,50);
 		
 		// add all components to the frame
 		add(tittleLabel);
@@ -124,8 +128,14 @@ public class Gui extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		System.out.print("I love you");
 		
+	}
+	
+	public static void main(String args[]) {
+		Gui app = new Gui();
+		app.setSize(850,400);
+		app.setVisible(true);
 	}
 
 
